@@ -40,14 +40,22 @@ server.register(require('vision'), (err) => {
 server.route(App.load.route('hosts'));
 
 server.route({
-    method: 'GET',
-    path: '/public/{param*2}',
-    handler: {
-      directory: {
-        path: Path.join(__dirname, 'public')
-      }
+  method: 'GET',
+  path: '/public/{param*2}',
+  handler: {
+    directory: {
+      path: Path.join(__dirname, 'public')
     }
+  }
 });
+
+server.route({
+  method: 'GET',
+  path: '/',
+  handler: (request, reply) => {
+    reply.redirect('/hosts');
+  }
+})
 
 server.start((err) => {
   if (err) console.error(err);
