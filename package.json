@@ -4,7 +4,8 @@
   "description": "A basic etc host manipulator with UI",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [
     "dns"
@@ -19,5 +20,14 @@
     "inert": "^4.0.0",
     "jade": "^1.11.0",
     "vision": "^4.1.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mfuentesg/domain-manager.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mfuentesg/domain-manager/issues"
+  },
+  "homepage": "https://github.com/mfuentesg/domain-manager#readme"
 }
