@@ -1,0 +1,18 @@
+extends ../layout.jade
+
+block title
+  title Create a new host
+
+block content
+  form.host-form(action="/hosts", method = "POST")
+    input(type="text", placeholder="Host address", name = "host_address", required)
+    input(type="text", placeholder="Host URL", name = "host_url", required)
+    input(type="submit", value = "Submit")
+  
+  .host-list
+    each address in addresses
+      .host-item
+        .host-info(data-address="#{address[0]}")= address[0]
+        .host-info(data-url="#{address[1]}")
+          a(href="http://#{address[1]}", target="_blank")= address[1]
+        a(href="/hosts/#{address[1]}", class = "host-delete") Delete

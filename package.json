@@ -1,0 +1,23 @@
+{
+  "name": "dns-host",
+  "version": "1.0.0",
+  "description": "A basic etc host manipulator with UI",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "dns"
+  ],
+  "author": "Marcelo Fuentes <marceloe.fuentes@gmail.com>",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.4.1",
+    "hapi": "^13.4.0",
+    "hapi-sass": "^2.1.0",
+    "hostile": "^1.0.2",
+    "inert": "^4.0.0",
+    "jade": "^1.11.0",
+    "vision": "^4.1.0"
+  }
+}

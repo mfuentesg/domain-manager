@@ -1,0 +1,12 @@
+.host-list,
+.host-form {
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+.host-list .host-item {
+  .host-info {
+    display: inline-block;
+    min-width: 200px;
+  }
+}
