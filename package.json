@@ -13,7 +13,6 @@
   "author": "Marcelo Fuentes <marceloe.fuentes@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "ejs": "^2.4.1",
     "hapi": "^13.4.0",
     "hapi-sass": "^2.1.0",
     "hostile": "^1.0.2",
