@@ -1,3 +1,7 @@
+$black: #000;
+$online-color: #8ce86d;
+$offline-color: #a8a8a8;
+
 .host-list,
 .host-form {
   margin: 0 auto;
@@ -8,5 +12,24 @@
   .host-info {
     display: inline-block;
     min-width: 200px;
+  }
+
+  .host-status {
+    background-color: $black;
+    border-radius: 50%;
+    display: inline-block;
+    height: 10px;
+    margin-left: 10px;
+    vertical-align: middle;
+    width: 10px;
+
+    &.online {
+      background-color: $online-color;
+    }
+
+    &.offline {
+      background-color: $offline-color;
+    }
+
   }
 }

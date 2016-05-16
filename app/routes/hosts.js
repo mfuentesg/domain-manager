@@ -1,16 +1,22 @@
 'use strict';
 
 const hostile = require('hostile');
-let hosts = [];
 
 module.exports = [
   {
     method: 'GET',
     path: '/hosts',
     handler: (request, reply) => {
-      reply.view('hosts/index', {
-        addresses: hostile.get(false)
-      }).code(200);
+      const addresses = [];
+
+      hostile.get(false).forEach((address) => {
+        addresses.push({
+          ip: address[0],
+          url: address[1]
+        });
+      });
+
+      reply.view('hosts/index', {addresses}).code(200);
     }
   },
   {

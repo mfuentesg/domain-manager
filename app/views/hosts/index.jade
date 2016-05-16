@@ -12,7 +12,8 @@ block content
   .host-list
     each address in addresses
       .host-item
-        .host-info(data-address="#{address[0]}")= address[0]
-        .host-info(data-url="#{address[1]}")
-          a(href="http://#{address[1]}", target="_blank")= address[1]
-        a(href="/hosts/#{address[1]}", class = "host-delete") Delete
+        .host-info(data-address="#{address.ip}")= address.ip
+        .host-info(data-url="#{address.url}")
+          a(href="http://#{address.url}", target="_blank")= address.url
+        a(href="/hosts/#{address.url}", class = "host-delete") Delete
+        span.host-status
