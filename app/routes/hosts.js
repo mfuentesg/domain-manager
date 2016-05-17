@@ -5,6 +5,13 @@ const hostile = require('hostile');
 module.exports = [
   {
     method: 'GET',
+    path: '/',
+    handler: (request, reply) => {
+      reply.redirect('/hosts');
+    }
+  },
+  {
+    method: 'GET',
     path: '/hosts',
     handler: (request, reply) => {
       const addresses = [];

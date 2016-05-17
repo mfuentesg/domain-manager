@@ -15,10 +15,10 @@ server.register([require('inert'), {
     src: Path.join(__dirname, 'vendor', 'sass'),
     dest: Path.join(__dirname, 'public', 'styles'),
     force: true,
-    debug: true,
+    debug: false,
     routePath: '/public/styles/{file}.css',
     outputStyle: 'nested',
-    sourceComments: true,
+    sourceComments: false,
     srcExtension: 'scss'
   }
 }], (err) => {
@@ -48,14 +48,6 @@ server.route({
     }
   }
 });
-
-server.route({
-  method: 'GET',
-  path: '/',
-  handler: (request, reply) => {
-    reply.redirect('/hosts');
-  }
-})
 
 server.start((err) => {
   if (err) console.error(err);
