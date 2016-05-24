@@ -30,6 +30,9 @@ $offline-color: #a8a8a8;
     &.offline {
       background-color: $offline-color;
     }
+  }
 
+  .host-delete {
+    margin: 0 10px;
   }
 }

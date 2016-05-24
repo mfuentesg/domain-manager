@@ -19,7 +19,7 @@
             .data('address')
         }
       }).done((result) => {
-        console.info(result);
+        console.info('Host deleted');
         window.location.reload();
       }).fail((err) => {
         console.error(result);
